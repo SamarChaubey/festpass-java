@@ -1,4 +1,7 @@
 pipeline {
+    triggers {
+    pollSCM('* * * * *')
+}
     agent { label 'student-laptop' }
     options {
         skipDefaultCheckout(true)
